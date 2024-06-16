@@ -20,7 +20,7 @@ public class Consulta {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return new Gson().fromJson(response.body(), Endereco.class);
         } catch (Exception e) {
-            throw new RuntimeException("Não consegui obter o endereço a partir desse CEP.");
+            throw new RuntimeException("Não foi possível obter o endereço a partir desse CEP.");
         }
 
     }
